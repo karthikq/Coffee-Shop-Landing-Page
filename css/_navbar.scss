@@ -1,0 +1,47 @@
+/** @format */
+
+.nav-bar {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  min-height: 3.5rem;
+  background-color: $primaryBg;
+  ul {
+    font-family: "Special Elite", cursive;
+    font-size: 1rem;
+    font-weight: 100;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li {
+      cursor: pointer;
+
+      margin-top: 0.25rem;
+      padding: 1rem 2rem;
+      list-style: none;
+      transition: all 0.1s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+        background-color: aliceblue;
+        color: #000;
+        text-transform: uppercase;
+      }
+    }
+    .main {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .player {
+      display: none;
+      position: relative;
+      bottom: 3.5px;
+    }
+  }
+}
+.nav-bar ul li:hover .player {
+  display: block;
+  padding: 0 0.5rem;
+}

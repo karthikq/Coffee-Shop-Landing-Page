@@ -1,0 +1,52 @@
+/** @format */
+
+.contents {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h3 {
+    font-family: "Roboto Slab", serif;
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  p {
+    color: rgba(255, 255, 255, 0.671);
+    font-family: "Special Elite", cursive;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    font-weight: 100;
+    font-size: 0.95rem;
+    padding: 0 1rem;
+    max-width: 35rem;
+    margin: 0 auto 2rem;
+  }
+  button {
+    cursor: pointer;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-family: "Special Elite", cursive;
+    padding: 0.8rem 1.5rem;
+    background-color: transparent;
+
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    outline: 0;
+    transition: all 0.5s;
+
+    &:hover {
+      padding: 1rem 1.2rem;
+      background-color: #000000;
+    }
+    &:active {
+      transform: scale(0.8);
+    }
+  }
+}

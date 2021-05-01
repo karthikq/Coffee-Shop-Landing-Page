@@ -1,0 +1,149 @@
+/** @format */
+
+.feedback-container {
+  width: 100%;
+  height: 100vh;
+  background: url("https://i.ibb.co/5BwZ9Yw/c.png") no-repeat center;
+  background-size: cover;
+  position: relative;
+  z-index: -2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.11),
+      rgba(0, 0, 0, 0.829)
+    );
+    z-index: -1;
+  }
+}
+.feedback-contents {
+  padding: 5% 10%;
+}
+.feedback-flex {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.feedback-video {
+  overflow: hidden;
+  width: 600px;
+  height: 600px;
+  video {
+    width: 100%;
+    height: 100%;
+  }
+}
+.feedbacks {
+  width: 25rem;
+  color: white;
+  .feedback1 {
+    display: flex;
+    align-items: center;
+    border: 4px solid #7e5142;
+    border-top-right-radius: 30px;
+    padding: 1rem;
+    margin: 2rem 0;
+    img {
+      width: 40px;
+      height: 70px;
+
+      object-fit: cover;
+    }
+    p {
+      margin-left: 0.8rem;
+      font-family: "Special Elite", cursive;
+      font-size: 0.9rem;
+      line-height: 1.2;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.836);
+    }
+  }
+}
+@media (max-width: 1290px) {
+  .feedback-contents {
+    padding: 5% 2%;
+  }
+  .feedbacks {
+    .feedback1 {
+      width: 20rem;
+      padding: 0.5rem;
+    }
+  }
+}
+@media (max-width: 1040px) {
+  .feedback-container {
+    &::before {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.247), rgb(0, 0, 0));
+    }
+  }
+  .feedback-flex {
+    justify-content: center;
+    align-items: center;
+  }
+  .feedback-contents {
+    padding: 5% 5%;
+  }
+  .feedback-video {
+    display: inline-block;
+    width: 600px;
+    height: 400px;
+
+    video {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .feedbacks {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .feedback1 {
+      width: 25rem;
+      padding: 0.5rem;
+      margin: 1rem 0.5rem;
+    }
+  }
+}
+@media (max-width: 725px) {
+  .feedback-video {
+    display: inline-block;
+    width: 450px;
+    height: 400px;
+  }
+  .feedbacks {
+    .feedback1 {
+      width: 80%;
+      padding: 0.5rem;
+      margin: 1rem 0.5rem;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .feedback-video {
+    display: inline-block;
+    width: 600px;
+    height: 250px;
+  }
+  .feedbacks {
+    .feedback1 {
+      width: 85%;
+      padding: 0.5rem;
+      margin: 1rem 0.5rem;
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
